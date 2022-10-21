@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>네이버: 회원가입</title>
+    <link rel="stylesheet" href="public/css/styles.css" />
+  </head>
+  <body>
+    <div id="wrap">
+      <div id="container">
+        <div id="logo">
+          <a href="http://naver.com"><img src="./images/naver.png" alt="naver-logo" width="240px" /></a>
+        </div>
+        <div id="join-container">
+          <div id="id-pw">
+            <h3>아이디</h3>
+            <div id="id-input-box" class="input-box"><input id="id-input" type="text" /><span id="email">@naver.com</span></div>
+            <h3>비밀번호</h3>
+            <div class="input-box pw-input-box">
+              <input class="pw-input" type="password" /><img class="pw-img" src="images/1.png" width="24px" height="24px" />
+            </div>
+            <h3>비밀번호 재확인</h3>
+            <div class="input-box pw-input-box">
+              <input class="pw-input" type="password" /><img class="pw-img" src="images/2.png" width="24px" height="24px" />
+            </div>
+          </div>
+          <div id="name-birth">
+            <h3>이름</h3>
+            <div id="name-input-box" class="input-box"><input id="name-input" type="text" /></div>
+            <h3>생년월일</h3>
+            <div id="birth-input-box">
+              <div id="year-input-box" class="input-box"><input id="year-input" type="text" placeholder="년(4자)" maxlength="4" /></div>
+              <div id="month-input-box" class="input-box">
+                <select id="month-input">
+                  <option>월</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  <option>6</option>
+                  <option>7</option>
+                  <option>8</option>
+                  <option>9</option>
+                  <option>10</option>
+                  <option>11</option>
+                  <option>12</option>
+                </select>
+              </div>
+              <div id="day-input-box" class="input-box"><input id="day-input" type="text" placeholder="일" maxlength="2" /></div>
+            </div>
+            <h3>성별</h3>
+            <div id="sex-input-box" class="input-box">
+              <select id="sex-input">
+                <option>성별</option>
+                <option>남자</option>
+                <option>여자</option>
+                <option>선택안함</option>
+              </select>
+            </div>
+            <h3>본인 확인 이메일<span id="choice">(선택)</span></h3>
+            <div id="confirm-email-input-box" class="input-box"><input id="confirm-email-input" type="email" placeholder="선택입력" /></div>
+          </div>
+          <div id="phone-confirm">
+            <h3>휴대전화</h3>
+            <div id="country-number-input-box" class="input-box">
+              <select id="country-number-input">
+                <option>대한민국 +82</option>
+              </select>
+            </div>
+            <div id="phone-number-confirm-box">
+              <span id="phone-number-input-box" class="input-box"> <input id="phone-number-input" type="text" placeholder="전화번호 입력" /></span>
+              <a id="phone-confirm-button-box" href="#"><span id="phone-confirm-button">인증번호 받기</span></a>
+            </div>
+            <div id="phone-number-confirm-input-box" class="input-box">
+              <input id="phone-number-confirm-input" type="text" placeholder="인증번호 입력하세요" />
+            </div>
+          </div>
+          <div id="confirm-button-box"><button id="confirm-button">가입하기</button></div>
+          <div id="footer">
+            <ul>
+              <li><a href="#">이용약관</a></li>
+              <li>
+                <a href="#"><strong>개인정보처리방침</strong></a>
+              </li>
+              <li><a href="#">책임의 한계와 법적고지</a></li>
+              <li><a href="#">회원정보 고객센터</a></li>
+            </ul>
+            <div id="naver-corp">
+              @<span><a href="#">Naver Corp.</a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
