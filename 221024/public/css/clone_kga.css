@@ -1,0 +1,324 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: NanumBarunGothic;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+#wrap {
+  width: 100%;
+}
+
+/* start header */
+#header {
+  width: 1200px;
+  height: 102px;
+  margin: 20px auto 0 auto;
+}
+
+/*ul과 높이를 맞추기 위해 margin 사용*/
+#header > h1 {
+  margin-top: 20px;
+  float: left;
+}
+
+#header > ul {
+  height: 102px;
+  float: right;
+  text-align: center;
+}
+
+#header > ul > li {
+  float: left;
+}
+
+/*a 태그에 padding 적용*/
+#header > ul > li > a {
+  display: block;
+  width: 180px;
+  height: 102px;
+  padding: 40px 0;
+  font-size: 19px;
+  font-weight: 700;
+  color: #004385;
+}
+/* end header */
+
+/* start visual */
+/*???*/
+#visual {
+  position: relative;
+}
+
+#visual > ul {
+  height: 500px;
+  max-width: 1920px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+#visual > ul > li {
+  position: absolute;
+}
+
+#visual > #nav-slider {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#nav-slider > ul {
+  width: 50%;
+  margin: 0 auto;
+}
+
+/*수정 필요 - 페이지에 따라 깨짐*/
+#nav-slider > ul > li {
+  display: inline-block;
+  width: 30%;
+  text-align: center;
+}
+
+#nav-slider > ul > li > a {
+  display: block;
+  padding: 15px 40px;
+  height: 50px;
+  color: #a8b4be;
+  font-size: 15px;
+  font-weight: 700;
+}
+#nav-slider > ul > li > a:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+/* end visual */
+
+/* start contents */
+#contents {
+  margin-top: 30px;
+}
+
+#main-contents {
+  width: 1200px;
+  margin: 0 auto;
+}
+#main-cnotents-box {
+  border: 1px solid #ececec;
+  /* 왜 overflow를 써야지만 나오는가 */
+  overflow: hidden;
+}
+
+/* start lecture */
+#lecture {
+  width: 50%;
+  float: left;
+}
+
+#lecture > ul > li {
+  width: 299.33px;
+  height: 230px;
+  float: left;
+  border-right: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+  padding: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: 178px 109px;
+}
+#lecture > ul > li > h2 {
+  font-size: 23px;
+  color: #2d2d2d;
+}
+
+#lecture > ul > li > h2 > div {
+  font-size: 12px;
+  color: #4689e1;
+}
+
+#lecture > ul > li > p {
+  width: 50%;
+  font-size: 12px;
+  line-height: 20px;
+  color: #666;
+  margin-top: 30px;
+}
+
+#lecture > ul > li > a {
+  display: block;
+  width: 100px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: #81b4f2;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  line-height: 32px;
+  margin-top: 40px;
+}
+#lecture > ul > li > a:hover {
+  background: #6da6ea;
+}
+#lec-1 {
+  background: url(http://www.kiweb.or.kr/images/main_new/main_con_ic_01.png);
+}
+#lec-2 {
+  background: url(http://www.kiweb.or.kr/images/main_new/main_con_ic_02.png);
+}
+#lec-3 {
+  background: url(http://www.kiweb.or.kr/images/main_new/main_con_ic_04.png);
+}
+#lec-4 {
+  background: url(http://www.kiweb.or.kr/images/main_new/main_con_ic_05.png);
+}
+/* 안되는 이유??? */
+/* #lec-4 a {
+  margin-top: 60px;
+} */
+#lecture > ul > #lec-4 > a {
+  margin-top: 60px;
+}
+#lec-5 {
+  background: url(http://www.kiweb.or.kr/images/main_new/main_con_ic_07.jpg);
+}
+#lec-6 {
+  background: url(http://www.kiweb.or.kr/images/main_new/main_con_ic_06.jpg);
+}
+#lecture > ul > #lec-6 > a {
+  margin-top: 60px;
+}
+
+#lec-7 > h3 {
+  font-size: 19px;
+  color: #2d2d2d;
+}
+#lec-7 > dl {
+  margin-top: 20px;
+}
+#lec-7 > dl > dt {
+  width: 70%;
+  float: left;
+  font-size: 12px;
+  line-height: 32px;
+}
+#lec-7 > dl > dt > a {
+  color: #666;
+}
+#lec-7 > dl > dt > a:hover {
+  color: #4689e1;
+}
+#lec-7 > dl > dd {
+  width: 30%;
+  float: left;
+  font-size: 12px;
+  line-height: 32px;
+}
+#lec-8 > h3 {
+  font-size: 19px;
+  color: #2d2d2d;
+}
+#lec-8 > button {
+  margin-left: 65px;
+  cursor: pointer;
+  border: none;
+}
+/* end lecture */
+
+/* start community */
+#community {
+  width: 50%;
+  float: left;
+}
+/* ??? */
+#interview {
+  width: 50%;
+  height: 415px;
+  float: left;
+  padding: 20px 20px;
+  /* background-color: red; */
+  border-right: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+}
+#interview > h3 {
+  position: relative;
+  width: 100%;
+  font-size: 19px;
+  color: #2d2d2d;
+}
+#interview > h3 > a {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+#content-inner {
+  position: relative;
+  width: 260px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+#slide-wrap {
+  position: relative;
+  width: 260px;
+  text-align: center;
+}
+#boxslider-container {
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+}
+#boxslider-container > ul > li > a > img {
+  width: 238px;
+  height: 330px;
+  border: 1px solid #ececec;
+}
+
+/* ????? */
+#left-btn {
+  position: absolute;
+  left: -20px;
+  top: 130px;
+  width: 20px;
+  height: 30px;
+  background: red;
+  line-height: 30px;
+  color: #fff;
+  outline: 0;
+}
+#right-btn {
+  position: absolute;
+  right: -18px;
+  top: 130px;
+  width: 20px;
+  height: 30px;
+  background: red;
+  line-height: 30px;
+  color: #fff;
+  outline: 0;
+}
+/* ????? */
+
+/* ??? */
+#review {
+  width: 50%;
+  height: 415px;
+  float: left;
+  background-color: green;
+}
+
+#media {
+  width: 598.67px;
+  height: 505px;
+  float: left;
+  background-color: blue;
+}
+/* end community */
+
+/* end contents */
