@@ -1,8 +1,43 @@
+@font-face {
+  font-family: "NanumBarunGothic";
+  font-style: normal;
+  font-weight: 400;
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot");
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix") format("embedded-opentype"),
+    url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff") format("woff"),
+    url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "NanumBarunGothic";
+  font-style: normal;
+  font-weight: 700;
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot");
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot?#iefix") format("embedded-opentype"),
+    url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.woff") format("woff"),
+    url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "NanumBarunGothic";
+  font-style: normal;
+  font-weight: 300;
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot");
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot?#iefix") format("embedded-opentype"),
+    url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.woff") format("woff"),
+    url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.ttf") format("truetype");
+}
+
+html,
+body {
+  font-family: "NanumBarunGothic";
+  font-size: 12px;
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: NanumBarunGothic;
 }
 
 ul,
@@ -310,14 +345,64 @@ a {
   width: 50%;
   height: 415px;
   float: left;
-  background-color: green;
+  padding: 20px;
+}
+#review > h3 {
+  position: relative;
+  font-size: 19px;
+  color: #2d2d2d;
+}
+#review > h3 > a {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+#main-review {
+  margin-top: 20px;
+}
+#main-review ul li {
+  margin-top: 5px;
+  padding: 5px 10px;
+  background: #fff;
+  font-size: 12px;
+  line-height: 20px;
+  border: 1px solid #ececec;
+}
+#main-review > ul > li > a {
+  display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: #666;
+}
+#main-review > ul > li > p {
+  text-align: right;
 }
 
 #media {
   width: 598.67px;
   height: 505px;
   float: left;
-  background-color: blue;
+  border-bottom: 1px solid #ececec;
+}
+#media > h3 {
+  padding: 20px;
+  position: relative;
+  font-size: 19px;
+  color: #2d2d2d;
+}
+#media > h3 > a {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+#media > h3 > a > img {
+  padding: 20px;
+}
+
+#media-content {
+  text-align: center;
+  margin-top: -10px;
 }
 /* end community */
 
