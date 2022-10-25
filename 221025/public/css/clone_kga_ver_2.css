@@ -1,0 +1,527 @@
+@font-face {
+  font-family: "NanumBarunGothic";
+  font-style: normal;
+  font-weight: 400;
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot");
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix") format("embedded-opentype"),
+    url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff") format("woff"),
+    url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "NanumBarunGothic";
+  font-style: normal;
+  font-weight: 700;
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot");
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot?#iefix") format("embedded-opentype"),
+    url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.woff") format("woff"),
+    url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "NanumBarunGothic";
+  font-style: normal;
+  font-weight: 300;
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot");
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot?#iefix") format("embedded-opentype"),
+    url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.woff") format("woff"),
+    url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.ttf") format("truetype");
+}
+
+html,
+body {
+  font-family: "NanumBarunGothic";
+  font-size: 12px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+#wrap {
+  width: 100%;
+}
+/* 헤더 시작 */
+#header {
+  width: 1200px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+#header > h1 {
+  float: left;
+  padding-top: 20px;
+}
+
+#header > ul {
+  float: right;
+}
+
+#header > ul > li {
+  float: left;
+  text-align: center;
+}
+#header > ul > li > a {
+  display: inline-block;
+  width: 180px;
+  height: 100px;
+  padding: 40px 0 40px 0;
+  font-size: 19px;
+  font-weight: bold;
+  color: #004385;
+}
+
+/* 헤더 끝 */
+
+/* 비쥬얼 영역 시작 */
+#visual-wrap {
+  position: relative;
+}
+#visual-wrap > #visual-container {
+  width: 1920px;
+  height: 500px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+#visual-wrap > #nav {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  background: rgba(0, 1, 1, 0.5);
+}
+#visual-wrap > #visual-container > ul > li > a > input {
+  display: none;
+}
+
+/* 중요 - 이미지를 한데 뭉쳐 줘야 함 */
+#visual-wrap > #visual-container > ul > li > a > img {
+  position: absolute;
+  opacity: 0;
+}
+
+#visual-wrap > #visual-container > ul > li > a > #img-1:checked + img {
+  transition: all 4s;
+  opacity: 1;
+}
+#visual-wrap > #visual-container > ul > li > a > #img-2:checked + img {
+  transition: all 4s;
+  opacity: 1;
+}
+#visual-wrap > #visual-container > ul > li > a > #img-3:checked + img {
+  transition: all 4s;
+  opacity: 1;
+}
+#visual-wrap > #visual-container > ul > li > a > #img-4:checked + img {
+  transition: all 4s;
+  opacity: 1;
+}
+#visual-wrap > #visual-container > ul > li > a > #img-5:checked + img {
+  transition: all 4s;
+  opacity: 1;
+}
+
+#nav > ul > li {
+  display: inline-block;
+}
+#nav > ul > li > label {
+  display: block;
+  height: 50px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  padding: 15px 40px;
+}
+#nav > ul > li > #label-1:visited {
+  transition: all 1s;
+  background: rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+}
+
+/* 비쥬얼 영역 끝 */
+
+/* 컨텐츠 영역 시작 */
+#contents-wrap {
+  padding-top: 20px;
+}
+#contents-wrap > #contents {
+  width: 1200px;
+  margin: 0 auto;
+  border-top: 1px solid #ececec;
+}
+#contents-wrap > #contents > #lecture {
+  float: left;
+  width: 50%;
+  border-left: 1px solid #ececec;
+}
+#contents > #lecture > ul > li {
+  float: left;
+  width: 50%;
+  height: 230px;
+  padding: 20px;
+  border-right: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+}
+
+/* 컨텐츠 내부 시작 */
+/* 렉처 시작 */
+/* 백그라운드 이미지 */
+.con-1 {
+  background: url(http://www.kiweb.or.kr/images/main_new/main_con_ic_01.png) 180px 107px no-repeat;
+}
+.con-2 {
+  background: url(http://www.kiweb.or.kr/images/main_new/main_con_ic_02.png) 180px 107px no-repeat;
+}
+.con-3 {
+  background: url(http://www.kiweb.or.kr/images/main_new/main_con_ic_04.png) 180px 107px no-repeat;
+}
+.con-4 {
+  background: url(http://www.kiweb.or.kr/images/main_new/main_con_ic_05.png) 180px 107px no-repeat;
+}
+.con-5 {
+  background: url(http://www.kiweb.or.kr/images/main_new/main_con_ic_07.jpg) 180px 107px no-repeat;
+}
+.con-6 {
+  background: url(http://www.kiweb.or.kr/images/main_new/main_con_ic_06.jpg) 180px 107px no-repeat;
+}
+/* 백그라운드 이미지 끝 */
+
+#lecture > ul > li > h2 {
+  font-size: 23px;
+  color: #2d2d2d;
+}
+
+#lecture > ul > li > h2 > span {
+  display: block;
+  font-size: 12px;
+  color: #4689e1;
+}
+#lecture > ul > li > p {
+  width: 50%;
+  margin-top: 30px;
+  font-size: 12px;
+  color: #666;
+}
+#lecture > ul > li > a {
+  display: block;
+  width: 100px;
+  margin-top: 40px;
+  padding-top: 6px;
+  height: 30px;
+  background: #81b4f2;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  border-radius: 15px;
+  text-align: center;
+}
+#lecture > ul > li > a:hover {
+  background: #6da6ea;
+}
+
+#lecture > ul > #notice > h3 {
+  font-size: 19px;
+}
+#lecture > ul > #notice > ul {
+  margin-top: 20px;
+}
+
+#lecture > ul > #notice > ul > li > a {
+  display: inline-block;
+  padding: 10px;
+  width: 180px;
+  height: 32px;
+  margin-right: 25px;
+  color: #666;
+}
+
+#lecture > ul > #notice > ul > li > a:hover {
+  color: #6da6ea;
+}
+
+#lecture > ul > #consult > h3 {
+  font-size: 19px;
+}
+
+#lecture > ul > #consult > button {
+  display: inline-block;
+  margin-left: 65px;
+  border: none;
+  cursor: pointer;
+}
+/* 렉처 끝 */
+
+/* 커뮤니티 시작 */
+#community {
+  float: left;
+  width: 600px;
+  /* 체크필요 */
+}
+#community > #community-top {
+  height: 415px;
+}
+
+/* 인터뷰 시작 */
+#community > #community-top > #interview {
+  position: relative;
+  float: left;
+  width: 50%;
+  height: 415px;
+  padding: 20px;
+  border-right: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+}
+#community > #community-top > #interview > #left {
+  position: absolute;
+  bottom: 50%;
+  left: 0px;
+  background: #eee;
+  color: #fff;
+  width: 20px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+}
+#community > #community-top > #interview > #left:hover {
+  background: #ddd;
+}
+
+#community > #community-top > #interview > #right {
+  position: absolute;
+  bottom: 50%;
+  right: 0px;
+  color: #fff;
+  background: #eee;
+  width: 20px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+}
+
+#community > #community-top > #interview > #right:hover {
+  background: #ddd;
+}
+
+#community > #community-top > #interview > h3 {
+  position: relative;
+  width: 100%;
+  font-size: 19px;
+  color: #2d2d2d;
+}
+
+#community > #community-top > #interview > h3 > a {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+#interview-img {
+  margin-top: 20px;
+}
+#interview-img > img {
+  height: 330px;
+  width: 250px;
+  border: 1px solid #ececec;
+}
+
+/* 인터뷰 끝 */
+
+/* 리뷰 시작 */
+#community > #community-top > #review {
+  float: left;
+  width: 50%;
+  height: 415px;
+  padding: 20px;
+  border-right: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+}
+
+#community > #community-top > #review > #main-review > ul {
+  margin-top: 20px;
+}
+#community > #community-top > #review > h3 {
+  position: relative;
+  font-size: 19px;
+  color: #2d2d2d;
+}
+
+#community > #community-top > #review > h3 > a {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+#community > #community-top > #review > #main-review > ul > li {
+  border: 1px solid #ececee;
+  margin-top: 5px;
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 20px;
+}
+#community > #community-top > #review > #main-review > ul > li > a {
+  color: #666;
+}
+#community > #community-top > #review > #main-review > ul > li > a:hover {
+  color: #4689e1;
+}
+
+#community > #community-top > #review > #main-review > ul > li > p {
+  text-align: right;
+}
+/* 리뷰 끝 */
+/* 미디어센터 시작 */
+#community > #community-bottom {
+  height: 505px;
+  border-right: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+}
+
+#community > #community-bottom > h3 {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  font-size: 19px;
+}
+
+#community > #community-bottom > h3 > a {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+#community > #community-bottom > #youtube {
+  padding: 0 20px;
+}
+/* 미디어센터 끝 */
+
+/* 커뮤니티 끝 */
+/* 컨텐츠 내부 끝 */
+/* 컨텐츠 영역 끝 */
+
+/* bbs 시작 */
+#bbs-wrap {
+  display: inline-block;
+  width: 100%;
+  clear: both;
+}
+#bbs {
+  width: 1200px;
+  height: 430px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.bbs-box {
+  display: inline-block;
+  border: 1px solid #ececec;
+  padding: 20px;
+  width: 390px;
+  height: 430px;
+}
+
+.bbs-box-1 {
+  float: left;
+  background: url(http://www.kiweb.or.kr/images/main_new/main_bbs_ic_01.png) 300px 15px no-repeat;
+}
+.bbs-box-2 {
+  float: left;
+  background: url(http://www.kiweb.or.kr/images/main_new/main_bbs_ic_02.png) 300px 15px no-repeat;
+  margin: 0 15px;
+}
+
+.bbs-box-3 {
+  float: right;
+  background: url(http://www.kiweb.or.kr/images/main_new/main_bbs_ic_03.png) 300px 15px no-repeat;
+}
+
+#bbs-wrap > #bbs > .bbs-box > h2 {
+  font-size: 23px;
+  margin-bottom: 20px;
+}
+#bbs-wrap > #bbs > .bbs-box > h2 > span {
+  display: block;
+  font-size: 12px;
+  color: #4689e1;
+}
+
+.bbs-img > a > div {
+  text-align: center;
+  margin-top: 5px;
+  font-size: 12px;
+  color: #666;
+}
+.bbs-img > a > div:hover {
+  color: #6da6ea;
+}
+
+.bbs-box > ul {
+  margin-top: 20px;
+}
+.bbs-box > ul > li {
+  font-size: 12px;
+  line-height: 32px;
+}
+.bbs-box > ul > li > a {
+  color: #666;
+}
+.bbs-box > ul > li > a:hover {
+  color: #6da6ea;
+}
+
+/* bbs 끝 */
+
+/* footer 시작 */
+#footer-wrap {
+  width: 100%;
+  height: 200px;
+  background: #323232;
+}
+
+#footer {
+  width: 1200px;
+  margin: 50px auto 0 auto;
+  padding: 20px 0;
+}
+#footer > div > ul > li {
+  display: inline-block;
+}
+
+#footer > div > ul > li > a {
+  padding: 0 10px;
+  color: #aeaeae;
+}
+
+#footer > div > ul > li > a:hover {
+  color: #ddd;
+}
+#footer > div > ul > li:not(:last-child) {
+  border-right: 1px solid #555;
+}
+#footer > h1 {
+  float: left;
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+#footer > #footer-copyright {
+  float: left;
+  margin-top: 25px;
+  margin-left: 50px;
+  line-height: 20px;
+  color: #aeaeae;
+}
+.copyright {
+  margin-top: 10px;
+  font-size: 11px;
+}
+
+/* footer 끝 */

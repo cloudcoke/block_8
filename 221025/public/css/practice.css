@@ -1,0 +1,105 @@
+@font-face {
+  font-family: "NanumBarunGothic";
+  font-style: normal;
+  font-weight: 400;
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot");
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix") format("embedded-opentype"),
+    url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff") format("woff"),
+    url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "NanumBarunGothic";
+  font-style: normal;
+  font-weight: 700;
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot");
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot?#iefix") format("embedded-opentype"),
+    url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.woff") format("woff"),
+    url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "NanumBarunGothic";
+  font-style: normal;
+  font-weight: 300;
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot");
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot?#iefix") format("embedded-opentype"),
+    url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.woff") format("woff"),
+    url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.ttf") format("truetype");
+}
+
+html,
+body {
+  font-family: "NanumBarunGothic";
+  font-size: 12px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+#visual {
+  position: relative;
+}
+
+#visual > ul {
+  height: 500px;
+  max-width: 1920px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+#visual > ul > li {
+  position: absolute;
+}
+
+#visual > #nav-slider {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/*수정 완료 - 페이지에 따라 깨짐 => nav-slider에 text-align:center*/
+#nav-slider > ul > li {
+  display: inline-block;
+}
+
+#nav-slider > ul > li > label {
+  display: block;
+  padding: 15px 40px;
+  height: 50px;
+  color: #a8b4be;
+  font-size: 15px;
+  font-weight: 700;
+}
+#nav-slider > ul > li > label:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+#visual > ul > li > a > img {
+  opacity: 0;
+}
+
+#visual > ul > li > a > #t1:checked + img {
+  opacity: 1;
+}
+#visual > ul > li > a > #t2:checked + img {
+  opacity: 1;
+}
+#visual > ul > li > a > #t3:checked + img {
+  opacity: 1;
+}

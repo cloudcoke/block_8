@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* 햄버거 모양 만들기 */
+span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: #000;
+}
+#icon {
+  display: none;
+}
+
+#icon + label {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+#icon + label > span {
+  position: absolute;
+  display: block;
+  border-radius: 30px;
+  height: 5px;
+  width: 100%;
+  background: #000;
+  transition: all 0.35s;
+  /* transition: all 0.35s => 모든 방향을 0.35s에 걸려 처리한다 */
+}
+
+#icon + label > span:nth-child(1) {
+  top: 0;
+}
+
+#icon + label > span:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#icon + label > span:nth-child(3) {
+  bottom: 0;
+}
+/* 햄버거 모양 만들기 끝*/
+
+/* 체크가 되어있을때  x모양으로 바꾸기 */
+/* 가운데로 모아서 45도 꺽어서 x자 만들기 */
+#icon:checked + label > span:nth-child(1) {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+#icon:checked + label > span:nth-child(2) {
+  display: none;
+}
+#icon:checked + label > span:nth-child(3) {
+  bottom: 50%;
+  transform: translateY(50%) rotate(-45deg);
+}
+
+/* 체크가 되어있을때  x모양으로 바꾸기 끝 */
+
+/* 클릭시 메뉴 나오게 */
+#icon:checked + label + div {
+  /* display: block; */
+  left: 0px;
+}
+
+#icon + label + div {
+  /* display: none; */
+  position: fixed;
+  left: -300px;
+  padding: 50px;
+  top: 0px;
+  width: 300px;
+  height: 100%;
+  background: red;
+  box-sizing: border-box;
+  z-index: 1;
+  transition: all 0.35s;
+}
+/* 클릭시 메뉴 나오게 끝*/
