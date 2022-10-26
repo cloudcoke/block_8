@@ -53,15 +53,21 @@ a {
   width: 100%;
 }
 /* 헤더 시작 */
-#header {
-  width: 1200px;
-  height: 100px;
-  margin: 0 auto;
+#header-wrap {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+#logo {
+  display: inline-block;
+  padding-top: 20px;
+  width: 300px;
 }
 
-#header > h1 {
-  float: left;
-  padding-top: 20px;
+#header {
+  display: inline-block;
+  width: 900px;
+  height: 100px;
 }
 
 #header > ul {
@@ -81,6 +87,59 @@ a {
   font-weight: bold;
   color: #004385;
 }
+/* 헤더 pop hover시 애니메이션 시작*/
+#header-pop {
+  position: absolute;
+  /* !!! */
+  top: 100%;
+  width: 100%;
+  z-index: 100;
+  background: rgba(50, 50, 50, 0.9);
+  display: none;
+}
+
+#header:hover + #header-pop {
+  display: block;
+}
+#header-pop:hover {
+  display: block;
+}
+
+/* 헤더 pop hover시 애니메이션 끝*/
+
+/* 헤더 pop 메뉴 시작 */
+#pop-box {
+  display: flex;
+  justify-content: center;
+  height: 190px;
+  padding-top: 8px;
+}
+#pop-box-con-1 {
+  display: inline-block;
+  width: 300px;
+  margin-top: 40px;
+  color: #afafaf;
+}
+
+.con-box {
+  display: flex;
+}
+
+.con-box > ul > li > a {
+  display: inline-block;
+  text-align: center;
+  width: 180px;
+  height: 35px;
+  padding: 10px 0;
+  color: #afafaf;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.con-box > ul > li > a:hover {
+  color: #ebebeb;
+}
+/* 헤더 pop 메뉴 끝 */
 
 /* 헤더 끝 */
 
