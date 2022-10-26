@@ -95,14 +95,19 @@ a {
   width: 100%;
   z-index: 1;
   background: rgba(50, 50, 50, 0.9);
-  display: none;
+  /* display: none; */
+  opacity: 0;
 }
 
 #header:hover + #header-pop {
-  display: block;
+  /* display: block; */
+  opacity: 1;
+  transition: all 0.5s ease;
 }
 #header-pop:hover {
-  display: block;
+  /* display: block; */
+  opacity: 1;
+  transition: all 0.5s ease;
 }
 
 /* 헤더 pop hover시 애니메이션 끝*/
