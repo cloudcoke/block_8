@@ -1,0 +1,222 @@
+@font-face {
+  font-family: "NanumBarunGothic";
+  font-style: normal;
+  font-weight: 400;
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot");
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix") format("embedded-opentype"),
+    url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff") format("woff"),
+    url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "NanumBarunGothic";
+  font-style: normal;
+  font-weight: 700;
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot");
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot?#iefix") format("embedded-opentype"),
+    url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.woff") format("woff"),
+    url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "NanumBarunGothic";
+  font-style: normal;
+  font-weight: 300;
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot");
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot?#iefix") format("embedded-opentype"),
+    url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.woff") format("woff"),
+    url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.ttf") format("truetype");
+}
+
+html,
+body {
+  font-family: "NanumBarunGothic";
+  font-size: 12px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+#wrap {
+  width: 100%;
+}
+/* 헤더 시작 */
+#header-wrap {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+#logo {
+  display: inline-block;
+  padding-top: 20px;
+  width: 300px;
+}
+
+#header {
+  display: inline-block;
+  width: 900px;
+  height: 100px;
+}
+
+#header > ul {
+  float: right;
+}
+
+#header > ul > li {
+  float: left;
+  text-align: center;
+}
+#header > ul > li > a {
+  display: inline-block;
+  width: 180px;
+  height: 100px;
+  padding: 40px 0 40px 0;
+  font-size: 19px;
+  font-weight: bold;
+  color: #004385;
+}
+/* 헤더 pop hover시 애니메이션 시작*/
+#header-pop {
+  position: absolute;
+  /* !!! */
+  top: 100%;
+  width: 100%;
+  z-index: 1;
+  background: rgba(50, 50, 50, 0.9);
+  display: none;
+}
+
+#header:hover + #header-pop {
+  display: block;
+}
+#header-pop:hover {
+  display: block;
+}
+
+/* 헤더 pop hover시 애니메이션 끝*/
+
+/* 헤더 pop 메뉴 시작 */
+#pop-box {
+  display: flex;
+  justify-content: center;
+  height: 190px;
+  padding-top: 8px;
+}
+#pop-box-con-1 {
+  display: inline-block;
+  width: 300px;
+  margin-top: 40px;
+  color: #afafaf;
+}
+
+.con-box {
+  display: flex;
+}
+
+.con-box > ul > li > a {
+  display: inline-block;
+  text-align: center;
+  width: 180px;
+  height: 35px;
+  padding: 10px 0;
+  color: #afafaf;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.con-box > ul > li > a:hover {
+  color: #ebebeb;
+}
+/* 헤더 pop 메뉴 끝 */
+
+/* 헤더 끝 */
+
+/* 비쥬얼 영역 시작 */
+#visual-wrap {
+  width: 100%;
+}
+
+#visual-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 500px;
+  overflow: hidden;
+}
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"] + label {
+  display: inline-block;
+  padding: 15px 40px;
+  height: 50px;
+  bottom: 0;
+  color: #fff;
+  z-index: 2;
+  font-size: 16px;
+  /* 텍스트가 길어도 줄바꿈 되지 않음  */
+  white-space: nowrap;
+}
+#visual-container > label:hover {
+  cursor: pointer;
+}
+
+input[type="radio"]:checked + label {
+  transition: all 4s;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.visual-img:hover {
+  cursor: pointer;
+}
+
+/* 탭 메뉴 클릭시 이미지 보이게 */
+#visual-container > img {
+  position: absolute;
+  opacity: 0;
+}
+
+#box-1:checked ~ .img1 {
+  transition: all 4s;
+  opacity: 1;
+}
+#box-2:checked ~ .img2 {
+  transition: all 4s;
+  opacity: 1;
+}
+#box-3:checked ~ .img3 {
+  transition: all 4s;
+  opacity: 1;
+}
+#box-4:checked ~ .img4 {
+  transition: all 4s;
+  opacity: 1;
+}
+#box-5:checked ~ .img5 {
+  transition: all 4s;
+  opacity: 1;
+}
+/* 탭 메뉴 클릭시 이미지 보이게 끝*/
+
+#nav {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  background: rgba(0, 1, 1, 0.5);
+}
+
+/* 비쥬얼 영역 끝 */
