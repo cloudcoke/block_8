@@ -102,12 +102,13 @@ a {
 #header:hover + #header-pop {
   /* display: block; */
   opacity: 1;
-  transition: all 0.5s ease;
+  transition: all 1s ease;
 }
+
 #header-pop:hover {
   /* display: block; */
   opacity: 1;
-  transition: all 0.5s ease;
+  transition: all 1s ease;
 }
 
 /* 헤더 pop hover시 애니메이션 끝*/
