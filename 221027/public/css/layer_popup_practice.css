@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+#wrap {
+  width: 100%;
+}
+/* 헤더 시작 */
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+}
+
+/* 헤더 왼쪽 시작 */
+#header > #header_left {
+  width: 110px;
+  padding-left: 20px;
+}
+/* 헤더 로고 시작 */
+#header > #header_left > h1 > a {
+  background: url(https://t1.daumcdn.net/brunch9/static/images/pc/logo_brunch_v1.png) no-repeat;
+  height: 22px;
+  /* a 태그에 이미지 넣고 텍스트 가리기 */
+  display: block;
+  text-indent: -9999px;
+}
+/* 헤더 로고 끝 */
+/* 헤더 왼쪽 끝 */
+
+/* 헤더 버튼 시작 */
+#header > #btn {
+  display: flex;
+  align-items: center;
+  padding-right: 20px;
+}
+/* 헤더 시작하기 버튼 시작 */
+#header > #btn > #start_btn {
+  display: block;
+  text-align: center;
+  height: 30px;
+  width: 64px;
+  line-height: 28px;
+  font-size: 12px;
+  border: 1px solid #959595;
+  border-radius: 16px;
+  color: #666;
+}
+/* 헤더 시작하기 버튼 끝 */
+
+/* 헤더 검색 버튼 시작 */
+#header > #btn > #search_btn {
+  display: block;
+  background: url(https://t1.daumcdn.net/brunch/static/img/help/pc/ico_view_cover.v4.png) no-repeat;
+  background-position: -30px 0;
+  width: 22px;
+  height: 22px;
+  margin-left: 16px;
+  text-indent: -9999px;
+}
+/* 헤더 검색 버튼 끝 */
+/* 헤더 버튼 끝 */
+/* 헤더 끝 */
+
+/* 컨텐츠 시작 */
+#contents {
+  width: 100%;
+}
+/* 인트로 시작 */
+#contents > #intro {
+  font-family: "Nanum Myeongjo";
+  width: 960px;
+  margin: 0 auto;
+  font-size: 12px;
+  color: #333;
+}
+
+#contents > #intro > #tit {
+  letter-spacing: -0.05em;
+  color: #1a1a1a;
+  font-size: 40px;
+  font-weight: normal;
+}
+#contents > #intro > #tit > #ico_logo {
+  display: inline-block;
+  height: 28px;
+  width: 28px;
+  background: url(https://t1.daumcdn.net/brunch9/static/images/pc/ico_brunch_v8_181004_v2.png) no-repeat;
+  background-position: -120px -200px;
+  vertical-align: top;
+}
+
+#contents > #intro > #desc {
+  color: #cacaca;
+  font-size: 32px;
+  line-height: 46px;
+  margin-top: -3px;
+  padding-bottom: 16px;
+  letter-spacing: -0.05em;
+}
+
+#contents > #intro > #notice_wrap {
+  height: 18px;
+  overflow: hidden;
+  position: relative;
+  line-height: 1.5;
+}
+
+#contents > #intro > #notice_wrap > #notice_item > a > #info_notice {
+  float: right;
+  padding-left: 7px;
+  color: #959595;
+}
+#contents > #intro > #notice_wrap > #notice_item > #ico_notice {
+  float: right;
+  color: #00c3bd;
+}
+/* 인트로 끝 */
+/* 컨텐츠 끝 */
+/* 레이어 팝업 시작 */
+
+/* 레이어 팝업 끝 */
