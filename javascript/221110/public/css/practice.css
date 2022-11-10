@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+#visual {
+  position: relative;
+  width: 100%;
+  height: 500px;
+}
+#visual > li {
+  position: absolute;
+  width: 100%;
+  height: 500px;
+  opacity: 0;
+}
+#visual > li.on {
+  opacity: 1;
+}
+
+#visual > li.a {
+  background: red;
+}
+#visual > li.b {
+  background: orange;
+}
+#visual > li.c {
+  background: yellow;
+}
+#visual > li.d {
+  background: green;
+}
+#visual > li.e {
+  background: blue;
+}
