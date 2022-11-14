@@ -30,12 +30,27 @@
 // };
 
 const btn = document.querySelector(".btn");
-const display = document.querySelector(".display");
+const btn2 = document.querySelector(".btn2");
+const display = document.querySelector("#display");
 
-const btnHandler = function (e) {
-  if (e.type === "click") display.innerHTML = "마우스를 클릭했다!";
-  if (e.type === "mouseover") display.innerHTML = "마우스를 올렸다!";
-};
+function handler(e) {
+  if (e.type === "click") {
+    display.innerHTML = `${e.target.textContent} 클릭`;
+    display.className = "a";
+  } else if (e.type === "mouseover") {
+    display.innerHTML = `${e.target.textContent}에 마우스를 올렸다!`;
+    display.className = "b";
+  }
+}
 
-btn.addEventListener("click", btnHandler);
-btn.addEventListener("mouseover", btnHandler);
+function handler2(e) {
+  display.innerHTML = "";
+  display.className = "";
+}
+
+btn.addEventListener("click", handler);
+btn.addEventListener("mouseover", handler);
+btn.addEventListener("mouseout", handler2);
+btn2.addEventListener("click", handler);
+btn2.addEventListener("mouseover", handler);
+btn2.addEventListener("mouseout", handler2);
