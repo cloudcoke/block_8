@@ -13,7 +13,7 @@ if (boards === null) {
 const tbody = document.querySelector("tbody");
 const boardsObj = JSON.parse(boards);
 // console.log(tbody);
-// console.log(boardsObj);
+console.log(boardsObj);
 
 function template(boardsObj, index) {
   return `
@@ -28,8 +28,6 @@ function template(boardsObj, index) {
 }
 
 for (let i = 0, j = 0; i < boardsObj.length; i++, j++) {
-  // 삭제된 게시물 예외 처리 필요
-
   // 방법1
   // console.log(j);
   // console.log(boardsObj[i].delete);
@@ -37,7 +35,7 @@ for (let i = 0, j = 0; i < boardsObj.length; i++, j++) {
     j--;
     continue;
   }
-  // 방법 1 끝
+  // 방법1 끝
 
   tbody.innerHTML += template(boardsObj[i], j); // 방법 1 : i -> j
 }

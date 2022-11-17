@@ -16,7 +16,7 @@ class Board {
 }
 
 // submit을 누를때마다 실행
-// 값을 담은 객체를 로컬 스토리지에 저장하고
+// 값을 담은 객체를 로컬 스토리지에 저장
 function submitHandler(e) {
   e.preventDefault();
   //   console.dir(e.target.subject);
