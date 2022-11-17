@@ -18,6 +18,12 @@ for (let i = 0; i < modifyFrmList.length; i++) {
   element.value = board[id];
 }
 
+function isValue(subject, writer, content) {
+  if (subject.length === 0) throw new Error("제목을 입력해주세요");
+  if (writer.length === 0) throw new Error("작성자를 입력해주세요");
+  if (content.length === 0) throw new Error("내용을 입력해주세요");
+}
+
 function modifyHandler(e) {
   e.preventDefault();
   //   console.dir(e.target.subject);
@@ -27,13 +33,19 @@ function modifyHandler(e) {
   const writer = e.target.writer.value;
   const content = e.target.content.value;
 
-  board.subject = subject;
-  board.writer = writer;
-  board.content = content;
+  try {
+    isValue(subject, writer, content);
 
-  const boardsStr = JSON.stringify(boardsObj);
-  localStorage.setItem("boards", boardsStr);
-  location.href = "/board/view.html" + idx;
+    board.subject = subject;
+    board.writer = writer;
+    board.content = content;
+    const boardsStr = JSON.stringify(boardsObj);
+    localStorage.setItem("boards", boardsStr);
+    location.href = "/board/view.html" + idx;
+  } catch (e) {
+    alert(e.message);
+    console.error(e);
+  }
 }
 
 function backBtnHandlr(e) {

@@ -27,15 +27,18 @@ function template(boardsObj, index) {
   `;
 }
 
-for (let i = 0, j = 0; i < boardsObj.length; i++, j++) {
-  // 방법1
-  // console.log(j);
-  // console.log(boardsObj[i].delete);
-  if (boardsObj[i].delete) {
-    j--;
-    continue;
-  }
-  // 방법1 끝
+// for (let i = 0, j = 0; i < boardsObj.length; i++, j++) {
+//   // 방법1
+//   // console.log(j);
+//   // console.log(boardsObj[i].delete);
+//   if (boardsObj[i].delete) {
+//     j--;
+//     continue;
+//   }
 
-  tbody.innerHTML += template(boardsObj[i], j); // 방법 1 : i -> j
+//   tbody.innerHTML += template(boardsObj[i], j); // 방법 1 : i -> j
+// }
+
+for (let i = 0; i < boardsObj.length; i++) {
+  tbody.innerHTML += template(boardsObj[i], i);
 }
