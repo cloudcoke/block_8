@@ -3,13 +3,15 @@ const writeFrm = document.querySelector("#writeFrm");
 // console.log(writeFrm);
 
 class Board {
-  constructor(subject, writer, content) {
-    this.index = 0;
+  constructor(index, subject, writer, content) {
+    this.index = index;
     this.subject = subject;
     this.writer = writer;
     this.content = content;
     this.date = "2022-11-17";
     this.hit = 0;
+    // 방법1
+    this.delete = false;
   }
 }
 
@@ -27,10 +29,12 @@ function submitHandler(e) {
   //   console.log(subject);
   //   console.log(writer);
   //   console.log(content);
-  const instance = new Board(subject, writer, content);
   // console.log(instance);
   // goto list
   const boardsObj = JSON.parse(localStorage.getItem("boards"));
+  const boardsLength = boardsObj.length; // 인덱스 부여
+  // console.log(boardsLength);
+  const instance = new Board(boardsLength, subject, writer, content);
   boardsObj.push(instance);
   const index = boardsObj.length - 1;
 
