@@ -52,8 +52,8 @@ function createRow(index) {
   li2.innerHTML = list[index].content;
   li3.innerHTML = list[index].date;
 
-  li2.append(deleteBtn);
   deleteBtn.innerHTML = "❌";
+  li2.append(deleteBtn);
 
   return ul;
 }
@@ -68,6 +68,11 @@ function drawing() {
 
 function totalRecord() {
   total.innerHTML = `(${list.length})`;
+}
+
+function commentListHandler(e) {
+  console.log(e.target.parentNode);
+  console.log(e.target.parentNode.dataset.index);
 }
 
 function commentBtnHandler(e) {
@@ -89,4 +94,5 @@ function commentBtnHandler(e) {
 }
 
 totalRecord();
+commentList.addEventListener("click", commentListHandler);
 commentBtn.addEventListener("submit", commentBtnHandler);
