@@ -1,5 +1,6 @@
 let boardsStr = localStorage.getItem("boards");
 
+// localStorage 초기값 지정
 if (boardsStr === null) {
   const listStr = JSON.stringify([]);
   localStorage.setItem("boards", listStr);
@@ -8,6 +9,7 @@ if (boardsStr === null) {
 
 const boardsObj = JSON.parse(boardsStr);
 
+// 템플릿 생성
 const template = (index, objValue) => {
   return `
   <tr>
@@ -20,8 +22,12 @@ const template = (index, objValue) => {
   `;
 };
 
+// 템플릿 반영
 const tbody = document.querySelector("tbody");
 
 for (let i = 0; i < boardsObj.length; i++) {
   tbody.innerHTML += template(i, boardsObj[i]);
+  boardsObj[i].refresh = false;
+  const refreshStr = JSON.stringify(boardsObj);
+  localStorage.setItem("boards", refreshStr);
 }

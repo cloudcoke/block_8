@@ -1,5 +1,6 @@
 const writeFrm = document.querySelector("#writeFrm");
 
+// 데이터 기본 틀
 class Board {
   constructor(indexNum, subjectStr, writerStr, contentStr) {
     this.index = indexNum;
@@ -7,9 +8,11 @@ class Board {
     this.Writer = writerStr;
     this.Content = contentStr;
     this.date = recordDate();
-    this.views = 0;
+    this.views = -1;
+    this.refresh = false;
   }
 
+  // 값 설정시 빈 값 체크
   set Subject(value) {
     if (value.length === 0) throw new Error("제목을 입력해주세요.");
     this.subject = value;
@@ -26,6 +29,7 @@ class Board {
   }
 }
 
+// 현재 날짜 반환 함수
 const recordDate = () => {
   const date = new Date();
   const yyyy = date.getFullYear();
@@ -40,6 +44,7 @@ const recordDate = () => {
   return arr.join("-");
 };
 
+// 글작성 버튼
 const submitHandler = (e) => {
   e.preventDefault();
   const subject = e.target.subject.value;
