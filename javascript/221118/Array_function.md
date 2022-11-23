@@ -180,4 +180,4 @@ console.log(["1", "2", "3"].map((str) => parseInt(str)));
 console.log(["1", "2", "3"].map(Number));
 ```
 
-reduce
+# reduce
