@@ -238,8 +238,83 @@ git push origin main
 
 ```
 
-2. git을 설치해서 하는방법
-   username: [username]
-   password: [token value]
+username: [username]
+password: [token value]
 
-git config --global credential.helper "osxkeychain"
+git config --global credential.helper cache
+
+## 보내기 & 가져오기
+
+### 보내기
+
+git push [원격저장소이름] [브랜치명]
+
+### 전체 가져오기
+
+```bash
+$ git clone [원격저장소 주소]
+https://github.com/ingoo-blockchain/rebase_sample
+
+$ git clone https://github.com/ingoo-blockchain/rebase_sample
+```
+
+rebase_sample이라는 폴더 안에다 파일을 다 집어넣어서 가져옴
+rebase_sample 피렉터리에 들어가서 브랜치 확인하면
+
+```bash
+git branch --all
+```
+
+!!! git nano 에디터 vi로 바꾸기
+
+```bash
+$git config --global core.editor "vi"
+```
+
+폴더 이름을 바꿔서 가져오려면
+
+```bash
+$ git clone https://github.com/ingoo-blockchain/rebase_sample rebase
+```
+
+# rebase이용 커밋 다루기
+
+커밋 메시지 변경
+커밋 삭제
+커밋 합치기
+커밋 나누기
+
+**문법**
+
+```bash
+git rebase -i [수정할 커밋의 이전해시]
+```
+
+git rebase -i [커밋해시]
+
+git rebase -i 624fd38702d54fce0fbae08d05bbb6d52767695c
+
+pick을 r로 리스트 페이지 변경
+
+feat: 게시판리스트 완성
+
+# 커밋메시지 변경하기
+
+# 커밋 삭제
+
+test.html 에 해당하는 커밋을
+git rebase -i 98d7acadbec7786ecb83f47f9b1b84242901a358
+
+pick -> r로 변경
+
+# 커밋 합치기
+
+수정1 수정2 커밋 합치기
+
+```bash
+git rebase -i cd30de30fca93b228d528ac8bfb2e7cb2a8a4d76
+```
+
+진짜 수정 완성 부분에 pick -> s
+
+### 현 상태 가져오기
